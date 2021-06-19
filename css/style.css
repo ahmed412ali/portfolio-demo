@@ -332,5 +332,8 @@ p {
   .reviews i {
     padding: 0.8rem;
   }
+  .about .col-md-4 img {
+  width: 18rem;
+}
 }
 /*# sourceMappingURL=style.css.map */
