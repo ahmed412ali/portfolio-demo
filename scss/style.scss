@@ -1,0 +1,264 @@
+@import 'config';
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: $roboto;
+    position: relative;
+}
+p {
+    font-size: $normal-font-size;
+    font-weight: $regular-font-weight;
+}
+
+.navbar {
+    padding: 1rem 6rem;
+    font-weight: $bold-font-weight;
+    box-shadow: $box-shadow;
+    .navbar-brand{
+        font-size: $big-font-size;
+    }
+    .navbar-nav{
+        font-size: $normal-font-size;
+        font-weight: $regular-font-weight;
+    }
+}
+
+.main{
+    
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+    
+    .col-md-6 {
+        padding-top: 10rem;
+    }
+
+    .image-container{
+        height: 20rem;
+        width: 20rem;
+        border-radius: 68% 32% 78% 22% / 32% 42% 58% 68% ;
+        background-color: $primary-color;
+        background-image: url('../assets/portrait1.png');
+        background-size: cover;  
+        animation: transform 10s infinite;
+        box-shadow: $box-shadow;
+    }
+    @keyframes transform {
+        0% {
+           border-radius: 68% 32% 78% 22% / 32% 42% 58% 68% ; 
+        }
+        25% {
+            border-radius: 28% 72% 84% 16% / 46% 48% 52% 54% ;
+        }
+        50%{
+            border-radius: 28% 72% 70% 30% / 36% 62% 38% 64% ;
+        }
+        75% {
+            border-radius: 74% 26% 56% 44% / 36% 35% 65% 64% ;
+        }
+        100% {
+            border-radius: 68% 32% 78% 22% / 32% 42% 58% 68% ; 
+        }
+    }
+
+    .btn {
+        padding: 0.6rem 2rem;
+        border-radius: 2rem;
+        border: 2px solid $primary-color;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        animation-duration: 0.8s;
+        font-size: $small-font-size;
+    }
+
+    .download-btn{
+        color: #fff;
+        background-color: $primary-color;
+        &:hover {
+            color: $font-color;
+            background-color: #fff; 
+            box-shadow: $box-shadow;
+        }
+    }
+    .info-btn {
+        color: $font-color;
+        background-color: #fff;
+        &:hover {
+            color: #fff;
+            background-color: $primary-color; 
+            box-shadow: $box-shadow;
+        }
+    }
+
+    span {
+        color: $primary-color;
+    }
+}
+
+.about {
+    padding: 2rem 3rem;
+    justify-content: center;
+    
+
+    .col-md-4 {
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 20rem;
+        }
+        
+    }
+    .col-md-8 {
+        padding: 2rem 5rem;
+    }
+}  
+
+.skills {
+    padding: 2rem 3rem;
+
+    .skill-bar {
+        margin: 1rem 0;
+        .progress-bar {
+            background-color: $primary-color;
+        }
+    }
+    .col-lg-8 {
+        justify-content: space-between;
+    }
+    .experience {
+        border: 2px solid $gray-color;
+        padding: 1rem 1rem;
+        max-width: 200px;
+        margin: 2rem 1rem;
+        border-style: dashed;
+        h1 {
+            position: relative;
+            &::after {
+                content: '+';
+                position: absolute;
+                
+                font-size: 24px;
+                font-weight: 300;
+                top: 2px;
+                color: $font-color;
+            }
+        }
+        
+    }
+}
+.projects {
+    padding: 4rem 1rem;
+    .row {
+        padding: 2rem;
+        button {
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            padding: 1rem;
+        }
+    }
+}
+.reviews {
+    padding: 2rem;
+    h1 {
+        padding-bottom: 2rem;
+    }
+}
+#demo {
+    background: $secondary-color;
+    max-width: 900px;
+    margin: auto;
+
+    .carousel-caption {
+        position: initial;
+        z-index: 10;
+        padding: 5rem 8rem;
+        color: rgba(78, 77, 77, 0.856);
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 2rem;
+
+        img {
+            width: 6rem;
+            border-radius: 5rem;
+            margin-top: 2rem
+        }
+        
+    }
+    i {
+        background-color: $primary-color;
+        padding: 1.4rem
+    }
+    .carousel-control-prev {
+        justify-content: flex-start
+    }
+    
+    .carousel-control-next {
+        justify-content: flex-end
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        transition: none;
+        opacity: unset
+    }
+}
+
+.contact {
+    padding: 4rem 10rem;
+    .heading {
+        padding-bottom: 3rem;
+    }
+    .form-control {
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        border: 1px solid $gray-color;
+    }
+    .download-btn{
+        color: #fff;
+        background-color: $primary-color;
+        padding: 0.8rem 2rem;
+        border: 2px solid $primary-color;
+        &:hover {
+            color: $font-color;
+            background-color: #fff; 
+            box-shadow: $box-shadow;
+        }
+    }
+    .social {
+        padding: 2rem;
+        i {
+            padding: 0 1rem;
+            font-size: 24px;
+            color: $font-color;
+            animation-duration: 0.8s;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.footer {
+    background: $font-color;
+    padding: 3rem;
+    a {
+        color: $gray-color;
+        text-decoration: none;
+    }
+}
+
+
+
+@import 'responsive';
