@@ -11,4 +11,18 @@ $(document).ready(function () {
         return false;
     })
     $('body').scrollspy({target: ".navbar"})
+    let nav_offset_top = $('.main').height() + 20;
+    function navbarFixed() {
+        if ($('.main').length) {
+            $(window).scroll(function () {
+                let scroll = $(window).scrollTop();
+                if (scroll >= nav_offset_top) {
+                    $('.navbar').addClass('fixed-top');
+                } else {
+                    $('.navbar').removeClass('fixed-top');
+                }
+            })
+        }
+    }
+    navbarFixed();
 });    
